@@ -1,0 +1,1258 @@
+
+@font-face {
+  font-family: 'GFonts-light';
+  font-style: normal;
+  font-weight: 300;
+  src: url('./fonts/GFonts-light.woff2') format('woff2'), /* Modern Browsers */
+       url('./fonts/GFonts-light.otf') format('opentype'), /* Safari, Android, iOS */
+       url('./fonts/GFonts-light.ttf') format('truetype');
+  text-rendering: optimizeLegibility;
+}
+
+@font-face {
+  font-family: 'GFonts-regular';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/GFonts-regular.woff2') format('woff2'), /* Modern Browsers */
+       url('./fonts/GFonts-regular.otf') format('opentype'), /* Safari, Android, iOS */
+       url('./fonts/GFonts-regular.ttf') format('truetype');
+  text-rendering: optimizeLegibility;
+}
+
+@font-face {
+  font-family: 'GFonts-solid';
+  font-style: normal;
+  font-weight: 900;
+  src: url('./fonts/GFonts-solid.woff2') format('woff2'), /* Modern Browsers */
+       url('./fonts/GFonts-solid.otf') format('opentype') /* Safari, Android, iOS */
+       /*url('./fonts/GFonts-solid1.ttf') format('truetype')*/;
+
+  text-rendering: optimizeLegibility;
+}
+
+.gf,.gfr,.gfl,.gfs {
+  position: relative;
+  display: inline-block;
+  -webkit-font-smoothing: antialiased;
+  font-size: inherit;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+}
+
+.gfr{
+  font-family: 'GFonts-regular';
+}
+
+.gfl{
+  font-family: 'GFonts-light';
+}
+
+.gf,
+.gfs{
+    font-family: 'GFonts-solid';
+
+}
+
+/* size */
+
+.gf-lg {
+  font-size: 1.33333em;
+  line-height: 0.75em;
+  vertical-align: -.0667em; }
+
+.gf-xs {
+  font-size: .75em; }
+
+.gf-sm {
+  font-size: .875em; }
+
+.fa-1x {
+  font-size: 1em; }
+
+.gf-2x {
+  font-size: 2em; }
+
+.gf-3x {
+  font-size: 3em; }
+
+.gf-4x {
+  font-size: 4em; }
+
+.gf-5x {
+  font-size: 5em; }
+
+.gf-6x {
+  font-size: 6em; }
+
+.gf-7x {
+  font-size: 7em; }
+
+.gf-8x {
+  font-size: 8em; }
+
+.gf-9x {
+  font-size: 9em; }
+
+.gf-10x {
+  font-size: 10em; }
+
+.gf-fw {
+    width: 1.25em;
+    text-align: center;
+  }
+
+/* list */
+
+.gf-ul {
+  list-style-type: none;
+  margin-left: 2.5em;
+  padding-left: 0; }
+  .gf-ul > li {
+    position: relative; }
+
+.gf-li {
+  left: -2em;
+  position: absolute;
+  text-align: center;
+  width: 2em;
+  line-height: inherit; }
+
+
+.gf-li.gf-lg {
+    left: -1.85714286em
+}
+
+.gf-border {
+    padding: .2em .25em .15em;
+    border: solid .08em #eee;
+    border-radius: .1em
+}
+
+/* position */
+
+.gf-pull-left {
+  float: left; }
+
+.gf-pull-right {
+  float: right; }
+
+.gf.gf-pull-left,
+.gfs.gf-pull-left,
+.gfr.gf-pull-left,
+.gfl.gf-pull-left,
+.gfb.gf-pull-left {
+  margin-right: .3em; }
+
+.gf.gf-pull-right,
+.gfs.gf-pull-right,
+.gfr.gf-pull-right,
+.gfl.gf-pull-right,
+.gfb.gf-pull-right {
+  margin-left: .3em; }
+
+
+  /* application */
+
+.gf-spin {
+  -webkit-animation: gf-spin 2s infinite linear;
+          animation: gf-spin 2s infinite linear; }
+
+.gf-pulse {
+  -webkit-animation: gf-spin 1s infinite steps(8);
+          animation: gf-spin 1s infinite steps(8); }
+
+@-webkit-keyframes gf-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+@keyframes gf-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+.gf-rotate-90 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg); }
+
+.gf-rotate-180 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg); }
+
+.gf-rotate-270 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg); }
+
+.gf-flip-horizontal {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
+  -webkit-transform: scale(-1, 1);
+          transform: scale(-1, 1); }
+
+.gf-flip-vertical {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
+  -webkit-transform: scale(1, -1);
+          transform: scale(1, -1); }
+
+.gf-flip-horizontal.gf-flip-vertical {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
+  -webkit-transform: scale(-1, -1);
+          transform: scale(-1, -1); }
+
+:root .gf-rotate-90,
+:root .gf-rotate-180,
+:root .gf-rotate-270,
+:root .gf-flip-horizontal,
+:root .gf-flip-vertical {
+  -webkit-filter: none;
+          filter: none; }
+
+.gf-stack {
+  display: inline-block;
+  height: 2em;
+  line-height: 2em;
+  position: relative;
+  vertical-align: middle;
+  justify-content: center;
+  width: 2em; }
+
+.gf-stack-1x,
+.gf-stack-2x {
+  left: 0;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+.gf-stack-1x {
+  line-height: inherit; }
+
+.gf-stack-2x {
+  font-size: 2em; }
+
+
+  /* color */
+
+.gf-inverse,
+.gf-white {
+  color: #fff; }
+
+
+/* map color */
+
+/* -正色色值（单数命名）- */
+.red1 {
+  color: #f94141 !important;
+}
+.orange1 {
+  color: #ff8939 !important;
+}
+.yellow1 {
+  color: #fccd03 !important;
+}
+.green1 {
+  color: #42d128 !important;
+}
+.lightblue1 {
+  color: #07d1d6 !important;
+}
+.darkblue1 {
+  color: #1397e8 !important;
+}
+.purple1 {
+  color: #8237f7 !important;
+}
+
+/* map-inverse color */
+
+/* -反色色值（复数命名）- */
+.red2 {
+  color: #ff5050 !important;
+}
+.orange2 {
+  color: #ffa300 !important;
+}
+.yellow2 {
+  color: #f9ff00 !important;
+}
+.green2 {
+  color: #00ffaa !important;
+}
+.lightblue2 {
+  color: #00ffff !important;
+}
+.darkblue2 {
+  color: #0098ff !important;
+}
+.purple2 {
+  color: #f72f81 !important;
+}
+
+/* gradient color */
+
+.gf-gradient-1 {
+  background: -webkit-linear-gradient(left, #ff4000,#ff688c);  /* Chrome10-25,Safari5.1-6 */
+  background: -moz-linear-gradient(left, #ff4000,#ff688c); /* FF3.6-15 */
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gf-gradient-2 {
+  background: -webkit-linear-gradient(left, #ff7a00,#f1b616);
+  background: -moz-linear-gradient(left, #ff7a00,#f1b616);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gf-gradient-3 {
+  background: -webkit-linear-gradient(left, #f1a900,#f1ea00);
+  background: -moz-linear-gradient(left, #f1a900,#f1ea00);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gf-gradient-4 {
+  background: -webkit-linear-gradient(left, #009d28,#43d57d);
+  background: -moz-linear-gradient(left, #009d28,#43d57d);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gf-gradient-5 {
+  background: -webkit-linear-gradient(left, #00edff,#01f791);
+  background: -moz-linear-gradient(left, #00edff,#01f791);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gf-gradient-6 {
+  background: -webkit-linear-gradient(left, #1568ff,#00d7ea);
+  background: -moz-linear-gradient(left, #1568ff,#00d7ea);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gf-gradient-7 {
+  background: -webkit-linear-gradient(left, #8300ff,#c867ff);
+  background: -moz-linear-gradient(left, #8300ff,#c867ff);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* icon unicode content */
+
+/* --------------1.1-------------- */
+.gf-icon-download:before {
+  content: "\0041";
+}
+.gf-icon-upload:before {
+  content: "\0042";
+}
+.gf-icon-share:before {
+  content: "\0043";
+}
+.gf-icon-key_unit:before {
+  content: "\0044";
+}
+.gf-icon-hospital:before {
+  content: "\0045";
+}
+.gf-icon-sentry_box:before {
+  content: "\0046";
+}
+.gf-icon-calendar:before {
+  content: "\0047";
+}
+.gf-icon-time:before {
+  content: "\0048";
+}
+.gf-icon-case:before {
+  content: "\0049";
+}
+.gf-icon-angle_up:before {
+  content: "\004A";
+}
+.gf-icon-angle_down:before {
+  content: "\004B";
+}
+.gf-icon-angle_left:before {
+  content: "\004C";
+}
+.gf-icon-angle_right:before {
+  content: "\004D";
+}
+.gf-icon-arrow_up:before {
+  content: "\004E";
+}
+.gf-icon-arrow_down:before {
+  content: "\004F";
+}
+.gf-icon-arrow_left:before {
+  content: "\0050";
+}
+.gf-icon-arrow_right:before {
+  content: "\0051";
+}
+.gf-icon-pistol:before {
+  content: "\0052";
+}
+.gf-icon-police_phone:before {
+  content: "\0053";
+}
+.gf-icon-fire_extinguisher:before {
+  content: "\0054";
+}
+.gf-icon-monitor_ball:before {
+  content: "\0055";
+}
+.gf-icon-gate:before {
+  content: "\0056";
+}
+.gf-icon-fire_hydrant:before {
+  content: "\0057";
+}
+.gf-icon-rectangle:before {
+  content: "\0058";
+}
+.gf-icon-circle:before {
+  content: "\0059";
+}
+.gf-icon-triangle:before {
+  content: "\005A";
+}
+.gf-icon-sunny:before {
+  content: "\00C0";
+}
+.gf-icon-rainy:before {
+  content: "\00C1";
+}
+.gf-icon-cloudy:before {
+  content: "\00C2";
+}
+.gf-icon-drug:before {
+  content: "\00C3";
+}
+.gf-icon-chemical:before {
+  content: "\00C4";
+}
+.gf-icon-dangerous_goods:before {
+  content: "\00C5";
+}
+.gf-icon-policemen:before {
+  content: "\00C6";
+}
+.gf-icon-auxiliary_police:before {
+  content: "\00C7";
+}
+.gf-icon-user:before {
+  content: "\00C8";
+}
+.gf-icon-police_car:before {
+  content: "\00C9";
+}
+.gf-icon-police_motorcycle:before {
+  content: "\00CA";
+}
+.gf-icon-police_electric-bike:before {
+  content: "\00CB";
+}
+/* --------------1.11-------------- */
+.gf-icon-delete:before {
+  content: "\00CC";
+}
+.gf-icon-add:before {
+  content: "\00CD";
+}
+.gf-icon-edit:before {
+  content: "\00CE";
+}
+.gf-icon-search:before {
+  content: "\00CF";
+}
+.gf-icon-police_office:before {
+  content: "\00D0";
+}
+.gf-icon-residential_area:before {
+  content: "\00D1";
+}
+.gf-icon-school:before {
+  content: "\00D2";
+}
+.gf-icon-Information:before {
+  content: "\00D3";
+}
+.gf-icon-notice:before {
+  content: "\00D4";
+}
+.gf-icon-alarm:before {
+  content: "\00D5";
+}
+.gf-icon-return_left:before {
+  content: "\00D6";
+}
+.gf-icon-return_right:before {
+  content: "\00D8";
+}
+.gf-icon-refresh:before {
+  content: "\00D9";
+}
+.gf-icon-police_recorder:before {
+  content: "\00DA";
+}
+.gf-icon-hand_station:before {
+  content: "\00DB";
+}
+.gf-icon-drone:before {
+  content: "\00DC";
+}
+.gf-icon-monitor_gun:before {
+  content: "\00DD";
+}
+.gf-icon-monitor_capture:before {
+  content: "\00DE";
+}
+.gf-icon-traffic_light:before {
+  content: "\0100";
+}
+.gf-icon-rhombus:before {
+  content: "\0102";
+}
+.gf-icon-location_rectangle:before {
+  content: "\0104";
+}
+.gf-icon-location_circle:before {
+  content: "\0106";
+}
+.gf-icon-shield:before {
+  content: "\0108";
+}
+.gf-icon-heavy_fog:before {
+  content: "\010A";
+}
+.gf-icon-thunder:before {
+  content: "\010C";
+}
+.gf-icon-light_snow:before {
+  content: "\010E";
+}
+.gf-icon-control_knives:before {
+  content: "\0110";
+}
+.gf-icon-flammable:before {
+  content: "\0112";
+}
+.gf-icon-explosive:before {
+  content: "\0114";
+}
+.gf-icon-firemen:before {
+  content: "\0116";
+}
+.gf-icon-group:before {
+  content: "\0118";
+}
+.gf-icon-doctor:before {
+  content: "\011A";
+}
+.gf-icon-bike:before {
+  content: "\011C";
+}
+.gf-icon-taxi:before {
+  content: "\011E";
+}
+.gf-icon-ambulance:before {
+  content: "\0120";
+}
+/* --------------1.12-------------- */
+.gf-icon-loading:before {
+  content: "\0122";
+}
+.gf-icon-setting:before {
+  content: "\0124";
+}
+.gf-icon-play:before {
+  content: "\0126";
+}
+.gf-icon-pause:before {
+  content: "\0128";
+}
+.gf-icon-factory:before {
+  content: "\012A";
+}
+.gf-icon-civil_affairs_bureau:before {
+  content: "\012C";
+}
+.gf-icon-fire_department:before {
+  content: "\012E";
+}
+.gf-icon-hotel:before {
+  content: "\0130";
+}
+.gf-icon-checkpoint:before {
+  content: "\0132";
+}
+.gf-icon-traffic_accident:before {
+  content: "\0134";
+}
+.gf-icon-theft:before {
+  content: "\0136";
+}
+.gf-icon-drowning:before {
+  content: "\0139";
+}
+.gf-icon-patrol:before {
+  content: "\013B";
+}
+.gf-icon-upper_right:before {
+  content: "\013D";
+}
+.gf-icon-upper_left:before {
+  content: "\013F";
+}
+.gf-icon-lower_right:before {
+  content: "\0141";
+}
+.gf-icon-lower_left:before {
+  content: "\0143";
+}
+.gf-icon-ballproof_clothes:before {
+  content: "\0145";
+}
+.gf-icon-security_point:before {
+  content: "\0147";
+}
+.gf-icon-rifle:before {
+  content: "\014A";
+}
+.gf-icon-submachine_gun:before {
+  content: "\014C";
+}
+.gf-icon-street_light:before {
+  content: "\014E";
+}
+.gf-icon-trees:before {
+  content: "\0150";
+}
+.gf-icon-bench:before {
+  content: "\0152";
+}
+.gf-icon-pentagram:before {
+  content: "\0154";
+}
+.gf-icon-ban:before {
+  content: "\0156";
+}
+.gf-icon-heart_shaped:before {
+  content: "\0158";
+}
+.gf-icon-badge:before {
+  content: "\015A";
+}
+.gf-icon-typhoon:before {
+  content: "\015C";
+}
+.gf-icon-rainstorm:before {
+  content: "\015E";
+}
+.gf-icon-smog:before {
+  content: "\0160";
+}
+.gf-icon-heavy_snow:before {
+  content: "\0162";
+}
+.gf-icon-container:before {
+  content: "\0164";
+}
+.gf-icon-inch_suitcase_18:before {
+  content: "\0166";
+}
+.gf-icon-inch_suitcase_20:before {
+  content: "\0168";
+}
+.gf-icon-inch_suitcase_24:before {
+  content: "\016A";
+}
+.gf-icon-floating_population:before {
+  content: "\016C";
+}
+.gf-icon-registered_population:before {
+  content: "\016E";
+}
+.gf-icon-focal_personnel:before {
+  content: "\0170";
+}
+.gf-icon-admin:before {
+  content: "\0172";
+}
+.gf-icon-fire_truck:before {
+  content: "\0174";
+}
+.gf-icon-walk:before {
+  content: "\0176";
+}
+.gf-icon-heavy_truck:before {
+  content: "\0178";
+}
+.gf-icon-police_car_4G:before {
+  content: "\0179";
+}
+/* --------------1.13-------------- */
+.gf-icon-chat:before {
+  content: "\017B";
+}
+.gf-icon-video_call:before {
+  content: "\017D";
+}
+.gf-icon-approval:before {
+  content: "\0181";
+}
+.gf-icon-archive:before {
+  content: "\0182";
+}
+.gf-icon-market:before {
+  content: "\0184";
+}
+.gf-icon-parking:before {
+  content: "\0186";
+}
+.gf-icon-tourist:before {
+  content: "\0187";
+}
+.gf-icon-suzhou_subway_station:before {
+  content: "\0189";
+}
+.gf-icon-combat_case:before {
+  content: "\018A";
+}
+.gf-icon-vehicle_control:before {
+  content: "\018B";
+}
+.gf-icon-fire:before {
+  content: "\018E";
+}
+.gf-icon-major_alarm:before {
+  content: "\018F";
+}
+.gf-icon-turn_right:before {
+  content: "\0190";
+}
+.gf-icon-turn_left:before {
+  content: "\0191";
+}
+.gf-icon-u_turn:before {
+  content: "\0193";
+}
+.gf-icon-straightright:before {
+  content: "\0194";
+}
+.gf-icon-baton:before {
+  content: "\0196";
+}
+.gf-icon-handcuffs:before {
+  content: "\0197";
+}
+.gf-icon-first_aid_kit:before {
+  content: "\0198";
+}
+.gf-icon-flashlight:before {
+  content: "\019C";
+}
+.gf-icon-portrait_bayonet:before {
+  content: "\019D";
+}
+.gf-icon-smoke_detector:before {
+  content: "\019F";
+}
+.gf-icon-temperature_sensor:before {
+  content: "\01A0";
+}
+.gf-icon-elevator:before {
+  content: "\01A2";
+}
+.gf-icon-vehicle_bayonet:before {
+  content: "\01A4";
+}
+.gf-icon-electric_police_bayonet:before {
+  content: "\01A6";
+}
+.gf-icon-super_bayonet:before {
+  content: "\01A7";
+}
+.gf-icon-certificate_verification:before {
+  content: "\01A9";
+}
+.gf-icon-high_altitude:before {
+  content: "\01AC";
+}
+.gf-icon-human_recognition:before {
+  content: "\01AE";
+}
+.gf-icon-mobile_hotspot:before {
+  content: "\01AF";
+}
+.gf-icon-mobile_wifi:before {
+  content: "\01B1";
+}
+.gf-icon-hexagon:before {
+  content: "\01B2";
+}
+.gf-icon-pentagon:before {
+  content: "\01B3";
+}
+.gf-icon-pie_chart:before {
+  content: "\01B5";
+}
+.gf-icon-histogram:before {
+  content: "\01B7";
+}
+.gf-icon-heavy_rain:before {
+  content: "\01B8";
+}
+.gf-icon-moon:before {
+  content: "\01BC";
+}
+.gf-icon-mobile_wifi:before {
+  content: "\01B1";
+}
+.gf-icon-sleet:before {
+  content: "\01C4";
+}
+.gf-icon-wind:before {
+  content: "\01C7";
+}
+.gf-icon-crossbow:before {
+  content: "\01CA";
+}
+.gf-icon-ammunition:before {
+  content: "\01CD";
+}
+
+.gf-icon-import_cargo:before {
+  content: "\01CF";
+}
+.gf-icon-postal_item:before {
+  content: "\01D1";
+}
+.gf-icon-patrolman:before {
+  content: "\01D3";
+}
+.gf-icon-community_police_officer:before {
+  content: "\01D5";
+}
+.gf-icon-back_office:before {
+  content: "\01D7";
+}
+.gf-icon-disabled:before {
+  content: "\01D9";
+}
+.gf-icon-bus:before {
+  content: "\01DB";
+}
+.gf-icon-new_energy_vehicle:before {
+  content: "\01DE";
+}
+.gf-icon-didi_taxi:before {
+  content: "\01E0";
+}
+.gf-icon-rail_crossing:before {
+  content: "\01E2";
+}
+/* --------------1.14-------------- */
+.gf-icon-difference:before {
+  content: "\01E4";
+}
+.gf-icon-check_mark:before {
+  content: "\01E6";
+}
+.gf-icon-other:before {
+  content: "\01E8";
+}
+.gf-icon-monitoring_community:before {
+  content: "\01EA";
+}
+.gf-icon-supermarket:before {
+  content: "\01EC";
+}
+.gf-icon-place_of_worship:before {
+  content: "\01EE";
+}
+.gf-icon-security_class:before {
+  content: "\01F1";
+}
+.gf-icon-dispute_class:before {
+  content: "\01F4";
+}
+.gf-icon-group_class:before {
+  content: "\01F6";
+}
+.gf-icon-cancel:before {
+  content: "\01F7";
+}
+.gf-icon-point_up:before {
+  content: "\01F8";
+}
+.gf-icon-point_down:before {
+  content: "\01FA";
+}
+.gf-icon-mobile_phone:before {
+  content: "\01FC";
+}
+.gf-icon-pc_end:before {
+  content: "\01FE";
+}
+.gf-icon-big_screen:before {
+  content: "\0200";
+}
+.gf-icon-robot:before {
+  content: "\0202";
+}
+.gf-icon-guide_card:before {
+  content: "\0204";
+}
+.gf-icon-charging_pile:before {
+  content: "\0206";
+}
+.gf-icon-snowflake:before {
+  content: "\0208";
+}
+.gf-icon-trapezoid:before {
+  content: "\020A";
+}
+.gf-icon-parallelogram:before {
+  content: "\020C";
+}
+.gf-icon-hail:before {
+  content: "\020E";
+}
+.gf-icon-cloudy_day:before {
+  content: "\0210";
+}
+.gf-icon-floating_dust:before {
+  content: "\0212";
+}
+.gf-icon-ruler:before {
+  content: "\0214";
+}
+.gf-icon-scissors:before {
+  content: "\0216";
+}
+.gf-icon-camera:before {
+  content: "\0218";
+}
+.gf-icon-old_man:before {
+  content: "\021A";
+}
+.gf-icon-military_personnel:before {
+  content: "\021C";
+}
+.gf-icon-petitioner:before {
+  content: "\021E";
+}
+.gf-icon-mobile_security_car:before {
+  content: "\0220";
+}
+.gf-icon-communication_car:before {
+  content: "\0222";
+}
+.gf-icon-MT:before {
+  content: "\0224";
+}
+/* --------------1.15-------------- */
+.gf-icon-location:before {
+  content: "\0226";
+}
+.gf-icon-link:before {
+  content: "\0228";
+}
+.gf-icon-volume:before {
+  content: "\022A";
+}
+.gf-icon-gas_station:before {
+  content: "\022C";
+}
+.gf-icon-ancient_town:before {
+  content: "\022E";
+}
+.gf-icon-cinema:before {
+  content: "\0230";
+}
+.gf-icon-unlock:before {
+  content: "\0232";
+}
+.gf-icon-seal:before {
+  content: "\023A";
+}
+.gf-icon-pawn:before {
+  content: "\023B";
+}
+.gf-icon-point_left:before {
+  content: "\023D";
+}
+.gf-icon-point_right:before {
+  content: "\023E";
+}
+.gf-icon-roundabout:before {
+  content: "\0241";
+}
+.gf-icon-telephone:before {
+  content: "\0243";
+}
+.gf-icon-dagger:before {
+  content: "\0244";
+}
+.gf-icon-goggle:before {
+  content: "\0245";
+}
+.gf-icon-community_access_control:before {
+  content: "\0246";
+}
+.gf-icon-unit_access_control:before {
+  content: "\0248";
+}
+.gf-icon-anti-climbing_equipment:before {
+  content: "\024A";
+}
+.gf-icon-sector:before {
+  content: "\024C";
+}
+.gf-icon-flag:before {
+  content: "\024E";
+}
+.gf-icon-semicircle:before {
+  content: "\0370";
+}
+.gf-icon-sunrise:before {
+  content: "\0372";
+}
+.gf-icon-sunset:before {
+  content: "\0376";
+}
+.gf-icon-tornado:before {
+  content: "\037F";
+}
+.gf-icon-stopwatch:before {
+  content: "\0386";
+}
+.gf-icon-voice_headset:before {
+  content: "\0388";
+}
+.gf-icon-radioactive_material:before {
+  content: "\0389";
+}
+.gf-icon-baby:before {
+  content: "\038A";
+}
+.gf-icon-student:before {
+  content: "\038C";
+}
+.gf-icon-armed_police:before {
+  content: "\038E";
+}
+.gf-icon-helicopter:before {
+  content: "\038F";
+}
+.gf-icon-airplane:before {
+  content: "\0391";
+}
+.gf-icon-assault_boat:before {
+  content: "\0392";
+}
+/* --------------1.16-------------- */
+.gf-icon-content:before {
+  content: "\0393";
+}
+.gf-icon-alarm_number:before {
+  content: "\0394";
+}
+.gf-icon-type:before {
+  content: "\0395";
+}
+.gf-icon-command_management:before {
+  content: "\0396";
+}
+.gf-icon-message_notification:before {
+  content: "\0397";
+}
+.gf-icon-release:before {
+  content: "\0398";
+}
+.gf-icon-voice_call:before {
+  content: "\0399";
+}
+.gf-icon-train_station:before {
+  content: "\039A";
+}
+.gf-icon-site:before {
+  content: "\039B";
+}
+.gf-icon-gymnasium:before {
+  content: "\039C";
+}
+.gf-icon-rescue:before {
+  content: "\039D";
+}
+.gf-icon-joint_command:before {
+  content: "\039E";
+}
+.gf-icon-dynamic_command:before {
+  content: "\039F";
+}
+.gf-icon-entrance:before {
+  content: "\03A0";
+}
+.gf-icon-exit:before {
+  content: "\03A1";
+}
+.gf-icon-emergency_exit:before {
+  content: "\03A3";
+}
+.gf-icon-guide_up:before {
+  content: "\03A4";
+}
+.gf-icon-guide_down:before {
+  content: "\03A5";
+}
+.gf-icon-guide_left:before {
+  content: "\03A6";
+}
+.gf-icon-guide_right:before {
+  content: "\03A7";
+}
+.gf-icon-fire_axe:before {
+  content: "\03A8";
+}
+.gf-icon-bag:before {
+  content: "\03A9";
+}
+.gf-icon-helmet:before {
+  content: "\03AA";
+}
+.gf-icon-deceleration_zone:before {
+  content: "\03AB";
+}
+.gf-icon-high_speed_bayonet:before {
+  content: "\03CF";
+}
+.gf-icon-manhole_cover:before {
+  content: "\03D2";
+}
+.gf-icon-ellipse:before {
+  content: "\03D3";
+}
+.gf-icon-page_sign:before {
+  content: "\03D4";
+}
+.gf-icon-type_u:before {
+  content: "\03D8";
+}
+.gf-icon-frost:before {
+  content: "\03DA";
+}
+.gf-icon-blizzard:before {
+  content: "\03DC";
+}
+.gf-icon-drought:before {
+  content: "\03DE";
+}
+.gf-icon-pen:before {
+  content: "\03E0";
+}
+.gf-icon-corroded_products:before {
+  content: "\03E2";
+}
+.gf-icon-package:before {
+  content: "\03E4";
+}
+.gf-icon-the_old:before {
+  content: "\03E6";
+}
+.gf-icon-man:before {
+  content: "\03E8";
+}
+.gf-icon-woman:before {
+  content: "\03EA";
+}
+.gf-icon-van:before {
+  content: "\03EC";
+}
+.gf-icon-truck:before {
+  content: "\03EE";
+}
+.gf-icon-electric_bus:before {
+  content: "\03F4";
+}
+/* --------------1.17-------------- */
+.gf-icon-control_gate:before {
+  content: "\03F7";
+}
+.gf-icon-navigation_lock:before {
+  content: "\03F9";
+}
+.gf-icon-pumping_station:before {
+  content: "\03FA";
+}
+.gf-icon-hydrological_station:before {
+  content: "\03FD";
+}
+.gf-icon-water_level_station:before {
+  content: "\03FE";
+}
+.gf-icon-evaporation_station:before {
+  content: "\03FF";
+}
+.gf-icon-rainfall_station:before {
+  content: "\0400";
+}
+.gf-icon-automatic_water_quality_monitoring_station:before {
+  content: "\0401";
+}
+.gf-icon-pennant:before {
+  content: "\0402";
+}
+.gf-icon-water_drop:before {
+  content: "\0403";
+}
+.gf-icon-pin:before {
+  content: "\0404";
+}
+.gf-icon-bridge_type:before {
+  content: "\0405";
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0
+}
+
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    clip: auto
+}
