@@ -7,11 +7,13 @@
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
-    "build": "node build/build.js"
+    "build": "node build/build.js",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "dependencies": {
     "animate.css": "^3.7.2",
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "echarts": "^4.8.0",
     "happypack": "^5.0.1",
     "iview": "^3.5.4",
@@ -21,7 +23,8 @@
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
     "vue-seamless-scroll": "^1.1.21",
-    "vuex": "^3.4.0"
+    "vuex": "^3.4.0",
+    "snyk": "^1.563.0"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
@@ -69,5 +72,6 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ]
+  ],
+  "snyk": true
 }
