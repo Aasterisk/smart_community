@@ -10,3 +10,5 @@ patch:
         patched: '2021-04-22T05:39:41.357Z'
     - node-sass > gaze > globule > lodash:
         patched: '2021-04-22T05:39:41.357Z'
+    - snyk > snyk-nodejs-lockfile-parser > @yarnpkg/core > lodash:
+        patched: '2021-04-22T05:55:41.881Z'
